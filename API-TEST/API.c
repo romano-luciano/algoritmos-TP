@@ -16,19 +16,19 @@ int crearFileJson(const char *filename,tLista* pl,accion act){
 
     fprintf(file, "{\n \"codigoGrupo\": \"logica\",\n");
     fprintf(file, "    \"jugador\": \n{\n");
-
+    
     
     // act((*pl)->dato,file);
     // pl = &(*pl)->sig;
     // while(*pl) {
-    //   fprintf(file,",\n");
-    //   act((*pl)->dato,file);
-    //   pl = &(*pl)->sig;
-    // }
-
-    //Aca tenemos que pensar la logica para cargar el nombre y si gano o no
-    fprintf(file, "\n}\n}");
-    fclose(file);
+        //   fprintf(file,",\n");
+        //   act((*pl)->dato,file);
+        //   pl = &(*pl)->sig;
+        // }
+        
+        //Aca tenemos que pensar la logica para cargar el nombre y si gano o no
+        fprintf(file, "\n}\n}");
+        fclose(file);
     return 1;
 }
 
@@ -39,11 +39,31 @@ void grabarDatoJson(void* a,void* b){
   fprintf(pb, "    \"vencedor\": %d",dato->puntuacion);
 }
 
+int cargarConfiguracion(const char *filename,void* dato){
+  char linea[TAM_LINEA];
+  char* aux;
+  tConfig config;
+  FILE* pf;
+  pf = fopen(filename,"rt");
+  if(!pf)
+    return 1;
+  fgets(linea,TAM_LINEA,pf);
+  aux= strchr(linea,'\n');
+  *aux = '\0'; 
+  aux = strchr(linea,'|');
+  strcpy(config.codGrup,aux+2);
+  *(aux-1) = '\0';
+  strcpy(config.url,linea);
+  memcpy(dato,&config,sizeof(tConfig));
+  fclose(pf);
+  return 0;
+}
+
 //Hasta aca las funciones anteriores deberian de ir, cambiar la logica del TDA y el dato a grabar
 
 char *read_file(const char *filename){
     char linea[100] = {0};
-
+    
     char* content;
 
     FILE *file = fopen(filename,"rt");
@@ -70,27 +90,6 @@ char *read_file(const char *filename){
     return content;
 }
 
-int cargarConfiguracion(const char *filename,void* dato){
-  char linea[TAM_LINEA];
-  char* aux;
-  tConfig config;
-  FILE* pf;
-  pf = fopen(filename,"rt");
-  if(!pf)
-    return 0;
-  fgets(linea,TAM_LINEA,pf);
-  aux = strchr(linea,'\n');
-  *aux='\0';
-  aux = strchr(linea,'|');
-  strcpy(config.codGrup,aux+2);
-  *(aux-1) = '\0';
-  strcpy(config.url,linea);
-  fgets(linea,TAM_LINEA,pf);
-  sscanf(linea,"%d",&config.cantPartidas);
-  memcpy(dato,&config,sizeof(tConfig));
-  fclose(pf);
-  return 1;
-}
 void generarUrl(char* cadena,void* dato){
     strcat(cadena,((tConfig*)dato)->url);
     strcat(cadena,"/");
