@@ -2,7 +2,7 @@
 //Definir la macro el filename
 
 
-int create_json_file(const char *filename,tLista* pl,accion act){
+int crearFileJson(const char *filename,tLista* pl,accion act){
     FILE *file = fopen(filename, "wt");
     if (!file) {
         perror("Error al crear el archivo");
@@ -32,12 +32,15 @@ int create_json_file(const char *filename,tLista* pl,accion act){
     return 1;
 }
 
-void grabarArchivoJSON(void* a,void* b){
-  tPersona* pa = (tPersona*)a;
-  FILE* pb = (FILE*)b;
-  fprintf(pb, "    {\"nombre\": \"%s\",\n",pa->nombre);
-  fprintf(pb, "    \"puntos\": %d}",pa->puntuacion);
+void grabarDatoJson(void* a,void* b){
+  //tPersona* pa = (tPersona*)a;
+  FILE* pf = (FILE*)b;
+  fprintf(pb, "    \"nombre\": \"%s\",\n",dato->nombre);
+  fprintf(pb, "    \"vencedor\": %d",dato->puntuacion);
 }
+
+//Hasta aca las funciones anteriores deberian de ir, cambiar la logica del TDA y el dato a grabar
+
 char *read_file(const char *filename){
     char linea[100] = {0};
 
@@ -66,6 +69,7 @@ char *read_file(const char *filename){
     fclose(file);
     return content;
 }
+
 int cargarConfiguracion(const char *filename,void* dato){
   char linea[TAM_LINEA];
   char* aux;
