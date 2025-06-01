@@ -101,7 +101,7 @@ void partida(int dific, FILE *informe)
     }
     else
         printf("Empieza tu oponente!!\n");
-    system("pause"); 
+    system("pause");
     system("cls");
     /// implemetar el maso=40 un vector que contenga los elementos en forma cartas, seran 40 elementos, y se deben mezclar aleatoriamente
     /// 0 = +2 puntos  1 = +1 punto  2 = -1 punto op  3 = -2 puntos op  4 = repetir turno 5 = espejo
@@ -275,15 +275,15 @@ void jugada(int *activo, int *pasivo, int elecActivo, int elecPasivo, int *vSaca
 {
     switch (elecActivo)
     {
-    case MAS_DOS_PUNTOS: 
+    case MAS_DOS_PUNTOS:
         *activo += 2;
         printf("Elegido: +2 puntos!\n");
         break;
-    case MAS_UN_PUNTO: 
+    case MAS_UN_PUNTO:
         *activo += 1;
         printf("E1egido: +1 punto!\n");
         break;
-    case RESTAR_UN_PUNTO: 
+    case RESTAR_UN_PUNTO:
         /// codicion de no tener puntaje negativo al que recibe el ataque
         if (*pasivo - 1 < 0)
             *pasivo = 0;
@@ -291,7 +291,7 @@ void jugada(int *activo, int *pasivo, int elecActivo, int elecPasivo, int *vSaca
             *pasivo -= 1;
         printf("Elegido: -1 punto al oponente!\n");
         break;
-    case RESTAR_DOS_PUNTOS: 
+    case RESTAR_DOS_PUNTOS:
         /// codicion de no tener puntaje negativo al que recibe el ataque
         if (*pasivo - 2 < 0)
             *pasivo = 0;
@@ -299,11 +299,11 @@ void jugada(int *activo, int *pasivo, int elecActivo, int elecPasivo, int *vSaca
             *pasivo -= 2;
         printf("Elegido: -2 puntos al oponente!\n");
         break;
-    case REPETIR_TURNO: 
+    case REPETIR_TURNO:
         printf("Elegido: Repetir el turno!\n");
         *vSacar = 1;
         break;
-    case ESPEJO: 
+    case ESPEJO:
         printf("Elegido: Espejo!\n");
         ///
         if (*vSacar)
@@ -420,7 +420,7 @@ void dificil(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) ///
             }
         }
     }
-    else if(pIA >= 10) //prioriza ganar cuando llega a 10 puntos y busca la carta sumadora mas alta 
+    else if(pIA >= 10) //prioriza ganar cuando llega a 10 puntos y busca la carta sumadora mas alta
     {
         for(int i = 0; i < 3; i++)
         {
@@ -462,7 +462,7 @@ void dificil(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) ///
     {
         for (int i = 0; i < 3; i++) /// recorre toda la mano hasta encontrar cartas de "repetir turno"
         {
-            if (*(manoIA + i) == REPETIR_TURNO) 
+            if (*(manoIA + i) == REPETIR_TURNO)
             {
                 *elec = i;
                 bandRepetir = 1;
@@ -470,10 +470,10 @@ void dificil(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) ///
             }
         }
     }
-    if (!bandRepetir && !bandEspejo && !bandPuntos) ///Si no entro en la condicion de que encontro repetir turno en mas de una carta buena 
-    {                                 //y tampoco encontro espejo en un restador recibido. Entonces tiene solo restadoras o sumadoras (debe tirar la mejor)                            
+    if (!bandRepetir && !bandEspejo && !bandPuntos) ///Si no entro en la condicion de que encontro repetir turno en mas de una carta buena
+    {                                 //y tampoco encontro espejo en un restador recibido. Entonces tiene solo restadoras o sumadoras (debe tirar la mejor)
         for (int i = 0; i < 3; i++)
-        {   
+        {
             //primero va a evaluar si tiene 2 repetir turno, los demas es el else
             if(*(manoIA + i) == REPETIR_TURNO)
             {
@@ -534,13 +534,6 @@ void dificil(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) ///
     //     random = rand() % 3;
     //     *elec = random;
     // }
-}
-
-void ranking(void)
-{
-    printf("MENU RANKING\n");
-    system("pause");
-    system("cls");
 }
 
 void pruebaIA(void)
