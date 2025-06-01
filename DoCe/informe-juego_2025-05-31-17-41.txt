@@ -1,5 +1,0 @@
-Nombre de jugador: patricio
-Dificultad: Dificil
----------------
-PUNTAJES. USUARIO: 0  IA: 0
-IA juega = Espejo
