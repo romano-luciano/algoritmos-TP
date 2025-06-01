@@ -420,7 +420,7 @@ void dificil(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) ///
             }
         }
     }
-    if(pIA >= 10) //prioriza ganar cuando llega a 10 puntos y busca la carta sumadora mas alta 
+    else if(pIA >= 10) //prioriza ganar cuando llega a 10 puntos y busca la carta sumadora mas alta 
     {
         for(int i = 0; i < 3; i++)
         {
@@ -484,7 +484,7 @@ void dificil(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) ///
                     break;
                 }
             }
-            if (pJugador > 1) // si tiene mas de 1 que busque restadoras sino no hace falta
+            if (pJugador > 0) // si tiene mas de 1 que busque restadoras sino no hace falta
             {
                 if (*(manoIA + i) == RESTAR_UN_PUNTO || *(manoIA + i) == RESTAR_DOS_PUNTOS) // encontro una carta restadora
                 {
@@ -495,7 +495,7 @@ void dificil(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) ///
                         break;
                     }
 
-                    *elec = i; // sino va a ser -1 y la almaceno en elec
+                    if(*(manoIA + i) == RESTAR_UN_PUNTO) *elec = i; // que asigne solo si es restar un punto porque sino asignaria un -2 aunque no haya entrado en la condicion anterior
                 }
             }
             if (*(manoIA + i) == MAS_DOS_PUNTOS || *(manoIA + i) == MAS_UN_PUNTO) // encontro una carta sumadora

@@ -30,7 +30,7 @@ int main()
                 gets(nom);
                 system("cls");
                 fprintf(informe,"Nombre de jugador: %s\n",nom);
-                menuDif(informe);
+                menuDif(informe); //a la funcion menu se le pasa el nombre del archivo .txt
                 fclose(informe);
                 break;
             case 'B':

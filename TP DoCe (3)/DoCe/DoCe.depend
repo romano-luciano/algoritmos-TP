@@ -24,7 +24,7 @@
 	<string.h>
 	"pilaDinamica.h"
 
-1748740941 source:c:\trabajo practico algoritmos\algoritmos-tp\tp doce (3)\doce\funciones.c
+1748804417 source:c:\trabajo practico algoritmos\algoritmos-tp\tp doce (3)\doce\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -36,7 +36,7 @@
 
 1748723794 c:\trabajo practico algoritmos\algoritmos-tp\tp doce (3)\doce\piladinamica.h
 
-1748723794 source:c:\trabajo practico algoritmos\algoritmos-tp\tp doce (3)\doce\main.c
+1748802001 source:c:\trabajo practico algoritmos\algoritmos-tp\tp doce (3)\doce\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -44,31 +44,6 @@
 	"pilaDinamica.h"
 
 1748723794 source:c:\trabajo practico algoritmos\algoritmos-tp\tp doce (3)\doce\piladinamica.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"pilaDinamica.h"
-
-1748796979 source:c:\users\lucianoromano\desktop\facultad\algoritmos\tp doce (3)pato\tp doce (3)\doce\funciones.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<time.h>
-	"Funciones.h"
-	"pilaDinamica.h"
-
-1748796979 c:\users\lucianoromano\desktop\facultad\algoritmos\tp doce (3)pato\tp doce (3)\doce\funciones.h
-
-1748796980 c:\users\lucianoromano\desktop\facultad\algoritmos\tp doce (3)pato\tp doce (3)\doce\piladinamica.h
-
-1748796980 source:c:\users\lucianoromano\desktop\facultad\algoritmos\tp doce (3)pato\tp doce (3)\doce\main.c
-	<stdio.h>
-	<stdlib.h>
-	<time.h>
-	"Funciones.h"
-	"pilaDinamica.h"
-
-1748796980 source:c:\users\lucianoromano\desktop\facultad\algoritmos\tp doce (3)pato\tp doce (3)\doce\piladinamica.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
