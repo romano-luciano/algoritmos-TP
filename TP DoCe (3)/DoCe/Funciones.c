@@ -101,7 +101,7 @@ void partida(int dific, FILE *informe)
     }
     else
         printf("Empieza tu oponente!!\n");
-    system("pause");
+    system("pause"); 
     system("cls");
     /// implemetar el maso=40 un vector que contenga los elementos en forma cartas, seran 40 elementos, y se deben mezclar aleatoriamente
     /// 0 = +2 puntos  1 = +1 punto  2 = -1 punto op  3 = -2 puntos op  4 = repetir turno 5 = espejo
@@ -401,7 +401,7 @@ void medio(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) /// p
 void dificil(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) /// me retorna la posicion en la mano
 {
     int bandPuntos = 0, bandEspejo = 0, cartaBuena = 0, bandRepetir = 0, cartaRestadora = 0, contRepetirTurno = 0;
-    if (pJugador >= 8) /// si el jugador tiene 8 o mas puntos, IA prioriza cartas 2 , 3 o 5
+    if (pJugador >= 8) /// si el jugador tiene 8 o mas puntos, IA prioriza cartas restar y repetir
     {
         for (int i = 0; i < 3; i++) /// recorre toda la mano hasta encontrar cartas de sumarse puntos o repetir turno
         {
@@ -432,7 +432,7 @@ void dificil(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) ///
                     *elec = i;
                     break;
                 }
-                *elec = i; // sino va a ser +1 y la almacena
+                else *elec = i; // sino va a ser +1 y la almacena
             }
         }
     }
@@ -495,7 +495,7 @@ void dificil(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) ///
                         break;
                     }
 
-                    if(*(manoIA + i) == RESTAR_UN_PUNTO) *elec = i; // que asigne solo si es restar un punto porque sino asignaria un -2 aunque no haya entrado en la condicion anterior
+                    else *elec = i; // que asigne solo si es restar un punto porque sino asignaria un -2 aunque no haya entrado en la condicion anterior
                 }
             }
             if (*(manoIA + i) == MAS_DOS_PUNTOS || *(manoIA + i) == MAS_UN_PUNTO) // encontro una carta sumadora
@@ -506,16 +506,16 @@ void dificil(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) ///
                     *elec = i;
                     break;
                 }
-                *elec = i; // sino va a ser +1 y la almacena
+                else *elec = i; // sino va a ser +1 y la almacena
             }
         }
     }
 
-    if(cartaBuena == 0 && cartaRestadora == 0) //si esto pasa entonces tiene que tirar un repetir o un espejo
+    if(!cartaBuena && !cartaRestadora && !bandEspejo) //si esto pasa entonces tiene que tirar un repetir o un espejo
     {
         for (int i = 0; i < 3; i++)
         {
-            if(*(manoIA + i) == REPETIR_TURNO || *(manoIA + i) == ESPEJO)
+            if(*(manoIA + i) == REPETIR_TURNO)
             {
                 *elec = i;
                 break;
