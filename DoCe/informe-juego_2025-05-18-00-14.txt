@@ -1,0 +1,211 @@
+Nombre de jugador: SERGIO
+Dificultad: Dificil
+---------------
+PUNTAJES. USUARIO: 0  IA: 0
+USUARIO juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 1  IA: 0
+IA juega = Espejo
+---------------
+PUNTAJES. USUARIO: 1  IA: 0
+USUARIO juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 2  IA: 0
+IA juega = +2 puntos
+---------------
+PUNTAJES. USUARIO: 2  IA: 2
+USUARIO juega = -2 puntos al oponente
+---------------
+PUNTAJES. USUARIO: 2  IA: 0
+IA juega = Repetir turno
+---------------
+PUNTAJES. USUARIO: 2  IA: 0
+IA juega = -1 punto al oponente
+---------------
+PUNTAJES. USUARIO: 1  IA: 0
+USUARIO juega = Espejo
+---------------
+PUNTAJES. USUARIO: 2  IA: 0
+IA juega = +2 puntos
+---------------
+PUNTAJES. USUARIO: 2  IA: 2
+USUARIO juega = +2 puntos
+---------------
+PUNTAJES. USUARIO: 4  IA: 2
+IA juega = +2 puntos
+---------------
+PUNTAJES. USUARIO: 4  IA: 4
+USUARIO juega = +2 puntos
+---------------
+PUNTAJES. USUARIO: 6  IA: 4
+IA juega = -1 punto al oponente
+---------------
+PUNTAJES. USUARIO: 5  IA: 4
+USUARIO juega = -2 puntos al oponente
+---------------
+PUNTAJES. USUARIO: 5  IA: 2
+IA juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 5  IA: 3
+USUARIO juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 6  IA: 3
+IA juega = Repetir turno
+---------------
+PUNTAJES. USUARIO: 6  IA: 3
+IA juega = Espejo
+---------------
+PUNTAJES. USUARIO: 6  IA: 3
+USUARIO juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 7  IA: 3
+IA juega = Repetir turno
+---------------
+PUNTAJES. USUARIO: 7  IA: 3
+IA juega = -1 punto al oponente
+---------------
+PUNTAJES. USUARIO: 6  IA: 3
+USUARIO juega = Espejo
+---------------
+PUNTAJES. USUARIO: 7  IA: 2
+IA juega = -1 punto al oponente
+---------------
+PUNTAJES. USUARIO: 6  IA: 2
+USUARIO juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 7  IA: 2
+IA juega = -1 punto al oponente
+---------------
+PUNTAJES. USUARIO: 6  IA: 2
+USUARIO juega = +2 puntos
+---------------
+PUNTAJES. USUARIO: 8  IA: 2
+IA juega = Repetir turno
+---------------
+PUNTAJES. USUARIO: 8  IA: 2
+IA juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 8  IA: 3
+USUARIO juega = Repetir turno
+---------------
+PUNTAJES. USUARIO: 8  IA: 3
+USUARIO juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 9  IA: 3
+IA juega = -2 puntos al oponente
+---------------
+PUNTAJES. USUARIO: 7  IA: 3
+USUARIO juega = -2 puntos al oponente
+---------------
+PUNTAJES. USUARIO: 7  IA: 1
+IA juega = -2 puntos al oponente
+---------------
+PUNTAJES. USUARIO: 5  IA: 1
+USUARIO juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 6  IA: 1
+IA juega = -1 punto al oponente
+---------------
+PUNTAJES. USUARIO: 5  IA: 1
+USUARIO juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 6  IA: 1
+IA juega = Espejo
+---------------
+PUNTAJES. USUARIO: 6  IA: 1
+USUARIO juega = -2 puntos al oponente
+---------------
+PUNTAJES. USUARIO: 6  IA: 0
+IA juega = -1 punto al oponente
+---------------
+PUNTAJES. USUARIO: 5  IA: 0
+USUARIO juega = -1 punto al oponente
+---------------
+PUNTAJES. USUARIO: 5  IA: 0
+IA juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 5  IA: 1
+USUARIO juega = Repetir turno
+---------------
+PUNTAJES. USUARIO: 5  IA: 1
+USUARIO juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 6  IA: 1
+IA juega = Repetir turno
+---------------
+PUNTAJES. USUARIO: 6  IA: 1
+IA juega = -2 puntos al oponente
+---------------
+PUNTAJES. USUARIO: 4  IA: 1
+USUARIO juega = Espejo
+---------------
+PUNTAJES. USUARIO: 6  IA: 0
+IA juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 6  IA: 1
+USUARIO juega = -1 punto al oponente
+---------------
+PUNTAJES. USUARIO: 6  IA: 0
+IA juega = +2 puntos
+---------------
+PUNTAJES. USUARIO: 6  IA: 2
+USUARIO juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 7  IA: 2
+IA juega = -1 punto al oponente
+---------------
+PUNTAJES. USUARIO: 6  IA: 2
+USUARIO juega = -2 puntos al oponente
+---------------
+PUNTAJES. USUARIO: 6  IA: 0
+IA juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 6  IA: 1
+USUARIO juega = Repetir turno
+---------------
+PUNTAJES. USUARIO: 6  IA: 1
+USUARIO juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 7  IA: 1
+IA juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 7  IA: 2
+USUARIO juega = -1 punto al oponente
+---------------
+PUNTAJES. USUARIO: 7  IA: 1
+IA juega = Repetir turno
+---------------
+PUNTAJES. USUARIO: 7  IA: 1
+IA juega = Repetir turno
+---------------
+PUNTAJES. USUARIO: 7  IA: 1
+IA juega = -2 puntos al oponente
+---------------
+PUNTAJES. USUARIO: 5  IA: 1
+USUARIO juega = Espejo
+---------------
+PUNTAJES. USUARIO: 7  IA: 0
+IA juega = -1 punto al oponente
+---------------
+PUNTAJES. USUARIO: 6  IA: 0
+USUARIO juega = Espejo
+---------------
+PUNTAJES. USUARIO: 7  IA: 0
+IA juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 7  IA: 1
+USUARIO juega = +2 puntos
+---------------
+PUNTAJES. USUARIO: 9  IA: 1
+IA juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 9  IA: 2
+USUARIO juega = +2 puntos
+---------------
+PUNTAJES. USUARIO: 11  IA: 2
+IA juega = +1 punto
+---------------
+PUNTAJES. USUARIO: 11  IA: 3
+USUARIO juega = +1 punto
+***********
+El USUARIO ha ganado!
