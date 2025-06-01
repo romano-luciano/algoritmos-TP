@@ -49,3 +49,19 @@
 	<string.h>
 	"pilaDinamica.h"
 
+1748810302 source:c:\trabajo practico algoritmos\algoritmos-tp\tp doce (3)\doce\ranking.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"Funciones.h"
+	"pilaDinamica.h"
+
+1748810585 source:c:\trabajo practico algoritmos\algoritmos-tp\tp doce (3)\doce\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"Funciones.h"
+	"pilaDinamica.h"
+
