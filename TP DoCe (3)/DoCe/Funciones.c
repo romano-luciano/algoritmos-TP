@@ -298,7 +298,7 @@ void pruebaIA(void)
 {
     int mano[3], ultimaCarta, pUsuario, pIA, resultado; /// resultado es la posicion en la mano
     char frase[FRASE];
-    printf("/////////MODO PRUEBA DE IA/////////\n");
+    printf("/////////MODO PRUEBA DE IA: DIFICIL/////////\n");
     printf("0 = +2 puntos, 1 = +1 punto, 2 = -1 punto al oponente, 3 = -2 puntos al oponente, 4 = volver a sacar, 5 = espejo\n");
     printf("Ingrese 1ra carta: ");
     scanf("%d", &mano[0]);
@@ -320,6 +320,37 @@ void pruebaIA(void)
     printf("Puntaje de usuario: %d\n", pUsuario);
     printf("Puntaje de IA: %d\n", pIA);
     dificil(pUsuario, pIA, ultimaCarta, mano, &resultado);
+    printf("LA IA HA ELEGIDO: %d  %s\n", mano[resultado], numAfrase(mano[resultado], frase));
+    system("pause");
+    system("cls");
+}
+
+void pruebaIAMedio(void)
+{
+    int mano[3], ultimaCarta, pUsuario, pIA, resultado; /// resultado es la posicion en la mano
+    char frase[FRASE];
+    printf("/////////MODO PRUEBA DE IA: MEDIO/////////\n");
+    printf("0 = +2 puntos, 1 = +1 punto, 2 = -1 punto al oponente, 3 = -2 puntos al oponente, 4 = volver a sacar, 5 = espejo\n");
+    printf("Ingrese 1ra carta: ");
+    scanf("%d", &mano[0]);
+    printf("Ingrese 2da carta: ");
+    scanf("%d", &mano[1]);
+    printf("Ingrese 3ra carta: ");
+    scanf("%d", &mano[2]);
+    printf("Ingrese ultimaCarta: ");
+    scanf("%d", &ultimaCarta);
+    printf("Ingrese puntaje de usuario: ");
+    scanf("%d", &pUsuario);
+    printf("Ingrese puntaje de IA: ");
+    scanf("%d", &pIA);
+    system("cls");
+    printf("* %s\n", numAfrase(*(mano + 0), frase));
+    printf("* %s\n", numAfrase(*(mano + 1), frase));
+    printf("* %s\n", numAfrase(*(mano + 2), frase));
+    printf("Ultima carta: %s\n", numAfrase(ultimaCarta, frase));
+    printf("Puntaje de usuario: %d\n", pUsuario);
+    printf("Puntaje de IA: %d\n", pIA);
+    medio(pUsuario, pIA, ultimaCarta, mano, &resultado);
     printf("LA IA HA ELEGIDO: %d  %s\n", mano[resultado], numAfrase(mano[resultado], frase));
     system("pause");
     system("cls");

@@ -24,7 +24,7 @@
 	<string.h>
 	"pilaDinamica.h"
 
-1748812322 source:c:\trabajo practico algoritmos\algoritmos-tp\tp doce (3)\doce\funciones.c
+1748813139 source:c:\trabajo practico algoritmos\algoritmos-tp\tp doce (3)\doce\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -36,7 +36,7 @@
 
 1748723794 c:\trabajo practico algoritmos\algoritmos-tp\tp doce (3)\doce\piladinamica.h
 
-1748806324 source:c:\trabajo practico algoritmos\algoritmos-tp\tp doce (3)\doce\main.c
+1748813023 source:c:\trabajo practico algoritmos\algoritmos-tp\tp doce (3)\doce\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -62,4 +62,12 @@
 	<stdlib.h>
 	<string.h>
 	"Funciones.h"
+
+1748820128 source:c:\trabajo practico algoritmos\algoritmos-tp\tp doce (3)\doce\dificultades.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"Funciones.h"
+	"pilaDinamica.h"
 

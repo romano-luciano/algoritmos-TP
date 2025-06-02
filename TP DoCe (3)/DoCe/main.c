@@ -14,7 +14,7 @@ int main()
     FILE*informe;
     do{
         printf("--------BIENVENIDOS A DoCe!!!--------\n");
-        printf("[A]JUGAR\n[B]VER RANKING\n[C]SALIR\n[D]PRUEBA IA\nIngrese una opcion: \n");
+        printf("[A]JUGAR\n[B]VER RANKING\n[C]SALIR\n[D]PRUEBA IA DIFICIL\n[E]PRUEBA IA MEDIO\nIngrese una opcion: \n");
         fflush(stdin);
         scanf("%c",&opc);
         switch(opc){
@@ -43,6 +43,9 @@ int main()
             case 'D':
                 pruebaIA();
                 break;
+            case 'E':
+                pruebaIAMedio();
+                break; 
             default:
                 system("cls");
                 printf("Opcion no valida. Ingrese nuevamente\n");
