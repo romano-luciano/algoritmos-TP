@@ -20,7 +20,7 @@ void jugada(int*activo,int*pasivo,int elecActivo,int elecPasivo,int*vSacar,int*d
 void facil(int pJugador,int pIA,int ultimaCarta,int*manoIA,int*elec);
 void medio(int pJugador,int pIA,int ultimaCarta,int*manoIA,int*elec);
 void dificil(int pJugador,int pIA,int ultimaCarta,int*manoIA,int*elec);
-int buscarEnMano(int*vec,size_t nMemb,int elem,int*subInd);
+int buscarEnMano(int*vec,size_t nMemb,int elem,int*subInd); //NO SE IMPLEMENTO
 void ranking(void);
 void pruebaIA(void);
 void pruebaIAMedio(void);
