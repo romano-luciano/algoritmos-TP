@@ -58,7 +58,7 @@ void imprimirEnteros(int *vec, size_t nMemb)
     printf("\n");
 }
 
-void jugada(int *activo, int *pasivo, int elecActivo, int elecPasivo, int *vSacar) /// ACTIVO es el puntaje del que esta jugando
+void jugada(int *activo, int *pasivo, int elecActivo, int elecPasivo, int *vSacar, int *descarteAnterior) /// ACTIVO es el puntaje del que esta jugando
 /// PASIVO es el puntaje del oponente
 /// elecActivo es la carta elegida del q esta jugando
 /// elecPasivo es la carta que descarto el oponente y estas viendo
@@ -92,6 +92,7 @@ void jugada(int *activo, int *pasivo, int elecActivo, int elecPasivo, int *vSaca
         break;
     case REPETIR_TURNO:
         printf("Elegido: Repetir el turno!\n");
+        *descarteAnterior = elecPasivo; //guardo el descarte anterior
         *vSacar = 1;
         break;
     case ESPEJO:

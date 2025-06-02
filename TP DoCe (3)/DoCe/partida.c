@@ -8,7 +8,7 @@
 void partida(int dific, FILE *informe)
 {
     int tInic; /// si tInic = 1 es el usuario , 0 = es la IA
-    int elec, puntajeUs = 0, puntajeIA = 0, vSacar, numElecIA, numElecUs, ronda = 1, descarte = -1;
+    int elec, puntajeUs = 0, puntajeIA = 0, vSacar, numElecIA, numElecUs, ronda = 1, descarte = -1, descarteAnterior = -1;
     int *manoUs = (int *)malloc(3 * sizeof(int));
     int *manoIA = (int *)malloc(3 * sizeof(int));
     if (!manoUs || !manoIA)
@@ -38,7 +38,6 @@ void partida(int dific, FILE *informe)
     /// 0 = +2 puntos  1 = +1 punto  2 = -1 punto op  3 = -2 puntos op  4 = repetir turno 5 = espejo
     int vec[MAZO] = {0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5};
     /// se mezcla el vector
-    // ordenarPorBurbujeo(vec,MAZO,sizeof(int),intRandom);
     mezclar(vec, MAZO, sizeof(int));
     imprimirEnteros(vec, MAZO); /// PRUEBA
     system("pause");
@@ -73,8 +72,12 @@ void partida(int dific, FILE *informe)
                         system("cls");
                         printf("//////////////////////////////\n");
                         printf("PUNTAJES. USUARIO: %d  IA: %d\n", puntajeUs, puntajeIA);
-                        if (descarte >= 0 && descarte <= 5) //Es necesaria?? Descarte va a estar siempre entre 0 y 5
-                            printf("Ultima carta descartada: %s\n", numAfrase(descarte, frase));
+                        if (descarte == REPETIR_TURNO) //si descarte es repetir turno debe avisar que se repitio el turno e imprimir la ultima carte jugada del oponente
+                            {puts("Hubo repetir turno...");
+                            printf("Ultima carta descartada del oponete: %s\n", numAfrase(descarteAnterior, frase));
+                            }
+                        else
+                            printf("Ultima carta descartada del oponete: %s\n", numAfrase(descarte, frase));
                         printf("TU TURNO. Tienes las siguientes cartas:\n");
                         printf("[1] %s\n", numAfrase(*(manoUs + 0), frase));
                         printf("[2] %s\n", numAfrase(*(manoUs + 1), frase));
@@ -85,7 +88,7 @@ void partida(int dific, FILE *informe)
 
                     numElecUs = *(manoUs + elec - 1); /// numElecUs es el numero tipo de carta. elec es el subindice []
                     fprintf(informe, "---------------\nPUNTAJES. USUARIO: %d  IA: %d\nUSUARIO juega = %s\n", puntajeUs, puntajeIA, numAfrase(numElecUs, frase));
-                    jugada(&puntajeUs, &puntajeIA, numElecUs, numElecIA, &vSacar);
+                    jugada(&puntajeUs, &puntajeIA, numElecUs, numElecIA, &vSacar, &descarteAnterior);
                     apilar(&pilaB, &numElecUs, sizeof(int));
                     descarte = numElecUs;
                     desapilar(&pilaA, manoUs + elec - 1, sizeof(int));
@@ -125,7 +128,7 @@ void partida(int dific, FILE *informe)
                     }
                     numElecIA = *(manoIA + elec);
                     fprintf(informe, "---------------\nPUNTAJES. USUARIO: %d  IA: %d\nIA juega = %s\n", puntajeUs, puntajeIA, numAfrase(numElecIA, frase));
-                    jugada(&puntajeIA, &puntajeUs, numElecIA, numElecUs, &vSacar);
+                    jugada(&puntajeIA, &puntajeUs, numElecIA, numElecUs, &vSacar, &descarteAnterior);
                     apilar(&pilaB, &numElecIA, sizeof(int));
                     descarte = numElecIA;
                     desapilar(&pilaA, manoIA + elec, sizeof(int));
