@@ -189,15 +189,22 @@ void partida(int dific, FILE *informe)
         {
             /// GANADOR USUARIO
             setColor(10);
-            printf("Has ganado!\n");
+            printf("Has ganado!\n\n");
+            setColor(14);
+            puts("Volviendo al menu principal...");
+            system("pause");
             fprintf(informe, "***********\nEl USUARIO ha ganado!");
             setColor(15);
+            
         }
         else if ((pilaVacia(&pilaA) && puntajeIA >= 12) || puntajeIA >= 12)
         {
             /// GANADOR IA
             setColor(12);
-            printf("La IA ha ganado!\n");
+            printf("La IA ha ganado!\n\n");
+            setColor(14);
+            puts("Volviendo al menu principal...");
+            system("pause");
             fprintf(informe, "***********\nLa IA ha ganado!");
             setColor(15);
         }
