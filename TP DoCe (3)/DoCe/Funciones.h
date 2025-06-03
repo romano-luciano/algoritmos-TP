@@ -14,8 +14,8 @@
 #define REPETIR_TURNO 4
 #define ESPEJO 5
 
-void menuDif(FILE*informe, const char *codigoGrupo, const char *nombreJugador);
-void partida(int dific,FILE*informe, const char *codigoGrupo, const char *nombreJugador);
+void menuDif(FILE*informe, const char *codigoGrupo, const char *nombreJugador); ///el codigoGrupo y el nombre son necesarios para pasarlos a la funcion "partida"
+void partida(int dific,FILE*informe, const char *codigoGrupo, const char *nombreJugador); ///el codigoGrupo y el nombre son necesarios a la hora de enviar el ganador a la API
 void mezclar(void*vec,size_t nMemb,size_t tamElem);
 void imprimirEnteros(int*vec, size_t tam);
 char*numAfrase(int num,char*frase);
