@@ -6,8 +6,6 @@
 
 void menuDif(FILE *informe, const char* codigoGrupo, const char *nombreJugador)
 {
-    printf("cod: %s\njugador: %s\n", codigoGrupo, nombreJugador);
-    system("pause");
     int dif;
     do
     {
@@ -36,7 +34,7 @@ void menuDif(FILE *informe, const char* codigoGrupo, const char *nombreJugador)
             system("cls");
             printf("Modo facil elegido!\n");
             fprintf(informe, "Dificultad: Facil\n");
-            partida(1, informe);
+            partida(1, informe, codigoGrupo, nombreJugador);
             dif = 0;
             break;
         case 2:
@@ -44,7 +42,7 @@ void menuDif(FILE *informe, const char* codigoGrupo, const char *nombreJugador)
             setColor(1); //azul oscuro
             printf("Modo medio elegido!\n");
             fprintf(informe, "Dificultad: Medio\n");
-            partida(2, informe);
+            partida(2, informe, codigoGrupo, nombreJugador);
             dif = 0;
             break;
         case 3:
@@ -52,7 +50,7 @@ void menuDif(FILE *informe, const char* codigoGrupo, const char *nombreJugador)
             setColor(4); //rojo oscuro
             printf("Modo dificil elegido!\n");
             fprintf(informe, "Dificultad: Dificil\n");
-            partida(3, informe);
+            partida(3, informe, codigoGrupo, nombreJugador);
             dif = 0;
             break;
         case 0:

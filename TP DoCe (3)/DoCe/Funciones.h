@@ -15,7 +15,7 @@
 #define ESPEJO 5
 
 void menuDif(FILE*informe, const char *codigoGrupo, const char *nombreJugador);
-void partida(int dific,FILE*informe);
+void partida(int dific,FILE*informe, const char *codigoGrupo, const char *nombreJugador);
 void mezclar(void*vec,size_t nMemb,size_t tamElem);
 void imprimirEnteros(int*vec, size_t tam);
 char*numAfrase(int num,char*frase);

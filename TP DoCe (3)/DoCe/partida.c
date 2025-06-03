@@ -5,7 +5,7 @@
 #include "Funciones.h"
 #include "pilaDinamica.h"
 
-void partida(int dific, FILE *informe)
+void partida(int dific, FILE *informe,const char *codigoGrupo, const char *nombreJugador)
 {
     int tInic; /// si tInic = 1 es el usuario , 0 = es la IA
     int elec, puntajeUs = 0, puntajeIA = 0, vSacar, numElecIA, numElecUs, ronda = 1, descarte = -1, descarteAnterior = -1;
@@ -195,7 +195,7 @@ void partida(int dific, FILE *informe)
             system("pause");
             fprintf(informe, "***********\nEl USUARIO ha ganado!");
             setColor(15);
-            
+
         }
         else if ((pilaVacia(&pilaA) && puntajeIA >= 12) || puntajeIA >= 12)
         {
