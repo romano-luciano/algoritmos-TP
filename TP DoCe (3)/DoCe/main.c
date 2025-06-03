@@ -29,8 +29,13 @@ void mainMenuBanner()
 int main()
 {
     char opc,nom[50],aux[MAX_LINES];
+    char codigoGrupo[50];
+
     time_t tiempoAhora;   ///declaro la variable tiempo
     time(&tiempoAhora);  ///guardo el tiempo actual en la variable
+
+    cargarCodigoGrupo(codigoGrupo, sizeof(codigoGrupo)); ///cargo el codigo del grupo en codigoGrupo
+
     struct tm*tiempo=localtime(&tiempoAhora);
     sprintf(aux,"informe-juego_%d-%02d-%02d-%02d-%02d.txt",tiempo->tm_year + 1900,tiempo->tm_mon + 1,tiempo->tm_mday,tiempo->tm_hour,tiempo->tm_min);
     FILE*informe;
@@ -51,7 +56,7 @@ int main()
                 gets(nom);
                 system("cls");
                 fprintf(informe,"Nombre de jugador: %s\n",nom);
-                menuDif(informe); //a la funcion menu se le pasa el nombre del archivo .txt
+                menuDif(informe, codigoGrupo, nom); //a la funcion menu se le pasa el nombre del archivo .txt
                 fclose(informe);
                 break;
             case 'B':

@@ -4,8 +4,10 @@
 #include "Funciones.h"
 
 
-void menuDif(FILE *informe)
+void menuDif(FILE *informe, const char* codigoGrupo, const char *nombreJugador)
 {
+    printf("cod: %s\njugador: %s\n", codigoGrupo, nombreJugador);
+    system("pause");
     int dif;
     do
     {
@@ -66,5 +68,5 @@ void menuDif(FILE *informe)
             break;
         }
     } while (dif != 0);
-    setColor(15);   
+    setColor(15);
 }

@@ -1,5 +1,8 @@
 #ifndef FUNCIONES_H_INCLUDED
 #define FUNCIONES_H_INCLUDED
+
+#include <curl/curl.h> //incluyo la libreria de curl en este archivo para que este en todos los demas sin inconvenientes
+
 #define MAZO 40
 #define FRASE 25
 #define MAX_LINES 50
@@ -11,7 +14,7 @@
 #define REPETIR_TURNO 4
 #define ESPEJO 5
 
-void menuDif(FILE*informe);
+void menuDif(FILE*informe, const char *codigoGrupo, const char *nombreJugador);
 void partida(int dific,FILE*informe);
 void mezclar(void*vec,size_t nMemb,size_t tamElem);
 void imprimirEnteros(int*vec, size_t tam);
@@ -27,4 +30,10 @@ void pruebaIAMedio(void);
 void ordenarPorBurbujeo(void *vec, size_t nmemb, size_t tamanyo, int (*cmp)(void *, void*));
 void interchange (void* a, void* b, size_t tamanyo);
 void setColor(int color); ///para los colores a la hora de imprimir texto en pantalla
+
+///FUNCIONES DE LA API
+void cargarCodigoGrupo(char *codigoGrupo, size_t tam);
+void enviarResultadoAPI(const char* nombreJugador, int gano, const char* codigoGrupo);
+void verRanking(const char* codigoGrupo);
+
 #endif // FUNCIONES_H_INCLUDED
