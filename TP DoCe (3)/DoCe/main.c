@@ -17,8 +17,6 @@ void mainMenuBanner()
     setColor(11); printf("[A]"); setColor(15); printf(" JUGAR\n");
     setColor(11); printf("[B]"); setColor(15); printf(" VER RANKING\n");
     setColor(11); printf("[C]"); setColor(15); printf(" SALIR\n");
-    setColor(11); printf("[D]"); setColor(15); printf(" PRUEBA IA DIFICIL\n");
-    setColor(11); printf("[E]"); setColor(15); printf(" PRUEBA IA MEDIO\n");
 
     setColor(14);
     printf("\n=====================================\n");
@@ -65,12 +63,6 @@ int main()
                 break;
             case 'C':
                 printf("Saliendo...");
-                break;
-            case 'D':
-                pruebaIA();
-                break;
-            case 'E':
-                pruebaIAMedio();
                 break;
             default:
                 system("cls");
