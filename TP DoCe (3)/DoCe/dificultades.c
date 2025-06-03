@@ -188,7 +188,7 @@ void medio(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) /// p
 
 void dificil(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) /// me retorna la posicion en la mano
 {
-    int bandPuntos = 0, bandEspejo = 0, cartaBuena = 0, bandRepetir = 0, cartaRestadora = 0, contRepetirTurno = 0;
+    int bandPuntos = 0, bandEspejo = 0, cartaBuena = 0, bandRepetir = 0, cartaRestadora = 0, contRepetirTurno = 0, bandCartaGanar = 0;
     if (pJugador >= 8) /// si el jugador tiene 8 o mas puntos, IA prioriza cartas restar y repetir
     {
         for (int i = 0; i < 3; i++) /// recorre toda la mano hasta encontrar cartas de sumarse puntos o repetir turno
@@ -214,7 +214,7 @@ void dificil(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) ///
         {
             if (*(manoIA + i) == MAS_DOS_PUNTOS || *(manoIA + i) == MAS_UN_PUNTO) // encontro una carta sumadora
             {
-                cartaBuena = 1;                      // bandera de que encontro carta buena
+                bandCartaGanar = 1;                      // bandera de que encontro carta buena
                 if (*(manoIA + i) == MAS_DOS_PUNTOS) // si es +2 que la tire y listo
                 {
                     *elec = i;
@@ -237,7 +237,7 @@ void dificil(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) ///
             }
         }
     }
-    else /// Si no sucedio nada de lo anterior va a contar las cartas buenas y buscar si tiene "repetir turno"
+    if(!bandEspejo && !bandCartaGanar && !bandPuntos) /// Si no sucedio nada de lo anterior va a contar las cartas buenas y buscar si tiene "repetir turno"
     {
         for (int i = 0; i < 3; i++)
         {
@@ -253,14 +253,15 @@ void dificil(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) ///
         {
             if (*(manoIA + i) == REPETIR_TURNO)
             {
+
                 *elec = i;
                 bandRepetir = 1;
                 break;
             }
         }
     }
-    if (!bandRepetir && !bandEspejo && !bandPuntos) /// Si no entro en la condicion de que encontro repetir turno en mas de una carta buena
-    {                                               // y tampoco encontro espejo en un restador recibido. Entonces tiene solo restadoras o sumadoras (debe tirar la mejor)
+    if (!bandRepetir && !bandEspejo && !bandPuntos && !bandCartaGanar) /// Si no entro en la condicion de que encontro repetir turno en mas de una carta buena
+    {                                             // y tampoco encontro espejo en un restador recibido. Entonces tiene solo restadoras o sumadoras (debe tirar la mejor)
         for (int i = 0; i < 3; i++)
         {
             // primero va a evaluar si tiene 2 repetir turno, los demas es el else
