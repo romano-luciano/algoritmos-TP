@@ -97,3 +97,68 @@
 	"Funciones.h"
 	"pilaDinamica.h"
 
+1748986217 source:c:\users\usuario\desktop\algoritmos-tp\tp doce (3)\doce\piladinamica.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"pilaDinamica.h"
+
+1748986217 c:\users\usuario\desktop\algoritmos-tp\tp doce (3)\doce\piladinamica.h
+
+1748986217 source:c:\users\usuario\desktop\algoritmos-tp\tp doce (3)\doce\dificultades.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"Funciones.h"
+	"pilaDinamica.h"
+
+1748986217 c:\users\usuario\desktop\algoritmos-tp\tp doce (3)\doce\funciones.h
+	<curl/curl.h>
+
+1748986217 source:c:\users\usuario\desktop\algoritmos-tp\tp doce (3)\doce\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"Funciones.h"
+	"pilaDinamica.h"
+	<windows.h>
+
+1748986217 source:c:\users\usuario\desktop\algoritmos-tp\tp doce (3)\doce\jugada.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"Funciones.h"
+	"pilaDinamica.h"
+
+1748986217 source:c:\users\usuario\desktop\algoritmos-tp\tp doce (3)\doce\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"Funciones.h"
+	"pilaDinamica.h"
+
+1748986217 source:c:\users\usuario\desktop\algoritmos-tp\tp doce (3)\doce\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Funciones.h"
+
+1748986217 source:c:\users\usuario\desktop\algoritmos-tp\tp doce (3)\doce\partida.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"Funciones.h"
+	"pilaDinamica.h"
+
+1748986217 source:c:\users\usuario\desktop\algoritmos-tp\tp doce (3)\doce\ranking.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"Funciones.h"
+	"pilaDinamica.h"
+
