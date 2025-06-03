@@ -83,7 +83,7 @@ void medio(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) /// p
                                 break; // cortamos el ciclo
                             }
                         }
-                        else if (cantEspejos == 1) //si hay un espejo 
+                        else if (cantEspejos == 1) //si hay un espejo
                         {
                             if (ultimaCarta == RESTAR_DOS_PUNTOS || ultimaCarta == RESTAR_UN_PUNTO) //tiraron una carta restadora
                             {
@@ -102,7 +102,7 @@ void medio(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) /// p
                                 }
                             }
                         }
-                        else if (*(manoIA + i) != RESTAR_DOS_PUNTOS && *(manoIA + i) != RESTAR_UN_PUNTO) //tiene dos cartas cualquiera y una restadora 
+                        else if (*(manoIA + i) != RESTAR_DOS_PUNTOS && *(manoIA + i) != RESTAR_UN_PUNTO) //tiene dos cartas cualquiera y una restadora
                         {
                             *elec = i;
                             break;
@@ -131,59 +131,6 @@ void medio(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) /// p
             }
         }
     }
-
-    // int band = 0, j = 0, random;
-    // int *aux = (int *)malloc(3 * sizeof(int)); /// aux = manoAux
-    // if (!aux)
-    // {
-    //     printf("Error al reservar memoria!");
-    //     exit(ERR_MEM);
-    // }
-    // if (!pJugador) /// si el USUARIO tiene 0 puntos
-    // {
-    //     for (int i = 0; i < 3; i++)
-    //     {
-    //         if (*(manoIA + i) == MAS_DOS_PUNTOS || *(manoIA + i) == MAS_UN_PUNTO || *(manoIA + i) == REPETIR_TURNO || *(manoIA + i) == ESPEJO) /// la IA evita las cartas de sacar puntos.
-    //         {
-    //             *(aux + j) = *(manoIA + i); /// copio en un auxiliar las cartas que no son 2 y 3
-    //             j++;
-    //         }
-    //     }
-    // }
-    // else
-    // {
-    //     memcpy(aux, manoIA, sizeof(*manoIA));
-    //     j = 3;
-    // }
-    // if (!j) /// si todas las cartas son de sacar puntos copio toda la mano
-    // {
-    //     memcpy(aux, manoIA, sizeof(*manoIA));
-    //     j = 3;
-    // }
-
-    // if (pIA >= 8) /// si el puntaje de la IA es mayor o igual a 8
-    // {
-    //     for (int i = 0; i < j; i++)
-    //     {
-    //         if (*(aux + i) == MAS_DOS_PUNTOS || *(aux + i) == MAS_UN_PUNTO) /// la IA prioriza las cartas de aumentase puntos.
-    //         {
-    //             *elec = i;
-    //             band = 1;
-    //             break;
-    //         } /// recorro toda la mano hasta encontrar
-    //     }
-    // }
-    // else /// si el puntaje de IA es menor a 8 elige al azar
-    // {
-    //     random = rand() % j;
-    //     *elec = random;
-    // }
-    // if (!band) /// sino tiene cartas de aumentarse puntos. elige al azar
-    // {
-    //     random = rand() % j;
-    //     *elec = random;
-    // }
-    // free(aux);
 }
 
 void dificil(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) /// me retorna la posicion en la mano
