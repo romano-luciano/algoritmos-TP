@@ -61,7 +61,7 @@ int main()
                 break;
             case 'B':
                 system("cls");
-                ranking();
+                ranking(codigoGrupo);
                 break;
             case 'C':
                 printf("Saliendo...");

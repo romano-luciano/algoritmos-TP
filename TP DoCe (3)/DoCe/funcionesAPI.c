@@ -5,6 +5,13 @@
 #include "Funciones.h"
 #include "pilaDinamica.h"
 
+size_t writeCallback(void* contents, size_t size, size_t nmemb, void* userp) ///funcion especial que solo se usa para ver el ranking
+{
+    size_t total = size * nmemb;
+    printf("%.*s", (int)total, (char*)contents);
+    return total;
+}
+
 void cargarCodigoGrupo(char *codigoGrupo, size_t tam)
 {
     FILE* archivo = fopen("config.txt", "r"); ///abro el archivo "config.txt" en modo lectura
@@ -52,5 +59,33 @@ void enviarResultadoAPI(const char* nombreJugador, int gano, const char* codigoG
     }
 
     ///finaliza el manejo global de curl
+    curl_global_cleanup();
+}
+
+void verRanking(const char* codigoGrupo)
+{
+    CURL* curl;
+    CURLcode res;
+    char url[128];
+
+    sprintf(url, "https://algoritmos-api.azurewebsites.net/api/doce/%s", codigoGrupo); ///Forma la url completa con la API y el codigo del grupo
+
+    ///se inicia el manejo de curl
+    curl_global_init(CURL_GLOBAL_DEFAULT);
+    curl = curl_easy_init();
+
+    if (curl) {
+        curl_easy_setopt(curl, CURLOPT_URL, url); ///le pasamos a curl la url donde debe hacer la peticion de GET
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writeCallback); ///le indicamos la funcion que debe usar para procesar la respuesta
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
+
+        res = curl_easy_perform(curl); ///ejecuta la peticion GET
+        if (res != CURLE_OK) {
+            fprintf(stderr, "Error consultando ranking: %s\n", curl_easy_strerror(res));
+        }
+
+        curl_easy_cleanup(curl);
+    }
+
     curl_global_cleanup();
 }

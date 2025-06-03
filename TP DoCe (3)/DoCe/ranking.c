@@ -5,9 +5,14 @@
 #include "Funciones.h"
 #include "pilaDinamica.h"
 
-void ranking(void)
+void ranking(const char *codigoGrupo)
 {
+    setColor(11);
     printf("MENU RANKING\n");
+    setColor(15);
+    verRanking(codigoGrupo);
+    putchar('\n');
+    setColor(14);
     system("pause");
     system("cls");
 }
