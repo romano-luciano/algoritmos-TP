@@ -35,13 +35,28 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Funciones.h" />
+		<Unit filename="dificultades.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="jugada.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="partida.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="pilaDinamica.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="pilaDinamica.h" />
+		<Unit filename="ranking.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

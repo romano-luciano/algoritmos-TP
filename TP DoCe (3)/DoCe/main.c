@@ -4,6 +4,28 @@
 #include "Funciones.h"
 #include "pilaDinamica.h"
 
+void mainMenuBanner()
+{
+    system("cls || clear");
+    setColor(14); // Amarillo
+    printf("=====================================\n");
+    printf("        BIENVENIDOS A DoCe        \n");
+    printf("=====================================\n");
+    setColor(15); // Blanco
+    printf("Seleccione una opcion:\n\n");
+
+    setColor(11); printf("[A]"); setColor(15); printf(" JUGAR\n");
+    setColor(11); printf("[B]"); setColor(15); printf(" VER RANKING\n");
+    setColor(11); printf("[C]"); setColor(15); printf(" SALIR\n");
+    setColor(11); printf("[D]"); setColor(15); printf(" PRUEBA IA DIFICIL\n");
+    setColor(11); printf("[E]"); setColor(15); printf(" PRUEBA IA MEDIO\n");
+
+    setColor(14);
+    printf("\n=====================================\n");
+    setColor(15);
+    printf("Ingrese una opcion: ");
+}
+
 int main()
 {
     char opc,nom[50],aux[MAX_LINES];
@@ -13,8 +35,7 @@ int main()
     sprintf(aux,"informe-juego_%d-%02d-%02d-%02d-%02d.txt",tiempo->tm_year + 1900,tiempo->tm_mon + 1,tiempo->tm_mday,tiempo->tm_hour,tiempo->tm_min);
     FILE*informe;
     do{
-        printf("--------BIENVENIDOS A DoCe!!!--------\n");
-        printf("[A]JUGAR\n[B]VER RANKING\n[C]SALIR\n[D]PRUEBA IA DIFICIL\n[E]PRUEBA IA MEDIO\nIngrese una opcion: \n");
+        mainMenuBanner();
         fflush(stdin);
         scanf("%c",&opc);
         switch(opc){
@@ -24,7 +45,7 @@ int main()
                 printf("No se pudo abrir el archivo!");
                 exit(ERR_ARCH);
                 }
-                system("cls");
+                system("cls || clear");
                 printf("Ingrese nombre de jugador: ");
                 fflush(stdin);
                 gets(nom);
@@ -45,7 +66,7 @@ int main()
                 break;
             case 'E':
                 pruebaIAMedio();
-                break; 
+                break;
             default:
                 system("cls");
                 printf("Opcion no valida. Ingrese nuevamente\n");

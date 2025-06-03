@@ -15,10 +15,12 @@ void jugada(int *activo, int *pasivo, int elecActivo, int elecPasivo, int *vSaca
     {
     case MAS_DOS_PUNTOS:
         *activo += 2;
+        setColor(10); //verde claro
         printf("Elegido: +2 puntos!\n");
         break;
     case MAS_UN_PUNTO:
         *activo += 1;
+        setColor(10);
         printf("E1egido: +1 punto!\n");
         break;
     case RESTAR_UN_PUNTO:
@@ -27,6 +29,7 @@ void jugada(int *activo, int *pasivo, int elecActivo, int elecPasivo, int *vSaca
             *pasivo = 0;
         else
             *pasivo -= 1;
+        setColor(12);
         printf("Elegido: -1 punto al oponente!\n");
         break;
     case RESTAR_DOS_PUNTOS:
@@ -35,15 +38,19 @@ void jugada(int *activo, int *pasivo, int elecActivo, int elecPasivo, int *vSaca
             *pasivo = 0;
         else
             *pasivo -= 2;
+        setColor(12);
         printf("Elegido: -2 puntos al oponente!\n");
         break;
     case REPETIR_TURNO:
+        setColor(13); //magenta claro
         printf("Elegido: Repetir el turno!\n");
         *descarteAnterior = elecPasivo; //guardo el descarte anterior
         *vSacar = 1;
         break;
     case ESPEJO:
+        setColor(11); //cian claro
         printf("Elegido: Espejo!\n");
+        setColor(15);
         ///
         if (*vSacar)
         {
@@ -74,4 +81,5 @@ void jugada(int *activo, int *pasivo, int elecActivo, int elecPasivo, int *vSaca
         }
         break;
     }
+    setColor(15);
 }

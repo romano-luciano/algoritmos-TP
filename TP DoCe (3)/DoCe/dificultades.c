@@ -115,10 +115,8 @@ void medio(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) /// p
 
     if (!bandPuntajeJugadorEs0 && !bandSumarPuntos) // estamos en una situacion de que no tiene que priorizar nada, puede elegir random
     {
-        puts("entro a ultimo caso");
         if (ultimaCarta == RESTAR_DOS_PUNTOS || ultimaCarta == RESTAR_UN_PUNTO)
         {
-            puts("tira random");
             *elec = rand() % 3; // si le tirar un restar que tire cualquiera, no si o si debe tirar espejo
         }
         else // sino le tiraron restar debe tirar cualquiera menos espejo, ya que seria una jugada inefectiva
@@ -127,7 +125,6 @@ void medio(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) /// p
             {
                 if (*(manoIA + i) != ESPEJO)
                 {
-                    puts("tira cualquiera menos espejo");
                     *elec = i;
                     break;
                 }
@@ -304,7 +301,8 @@ void dificil(int pJugador, int pIA, int ultimaCarta, int *manoIA, int *elec) ///
         }
     }
 
-    if (!cartaBuena && !cartaRestadora && !bandEspejo) // si esto pasa entonces tiene que tirar un repetir o un espejo
+    //situacion de tener dos espejos y un repetir o dos repetir y un espejo
+    if (!cartaBuena && !cartaRestadora && !bandEspejo && !bandPuntos) // si esto pasa entonces tiene que tirar un repetir
     {
         for (int i = 0; i < 3; i++)
         {

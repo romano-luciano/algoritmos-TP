@@ -26,4 +26,5 @@ void pruebaIA(void);
 void pruebaIAMedio(void);
 void ordenarPorBurbujeo(void *vec, size_t nmemb, size_t tamanyo, int (*cmp)(void *, void*));
 void interchange (void* a, void* b, size_t tamanyo);
+void setColor(int color); ///para los colores a la hora de imprimir texto en pantalla
 #endif // FUNCIONES_H_INCLUDED

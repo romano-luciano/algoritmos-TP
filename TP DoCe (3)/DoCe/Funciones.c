@@ -139,3 +139,14 @@ void interchange(void *a, void *b, size_t tamanyo)
 
     free(aux);
 }
+
+#ifdef _WIN32
+#include <windows.h>
+void setColor(int color) {
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
+}
+#else
+void setColor(int color) {
+    printf("\033[0;%dm", color);
+}
+#endif
