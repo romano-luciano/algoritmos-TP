@@ -158,6 +158,7 @@ void partida(int dific, FILE *informe)
                     jugada(&puntajeIA, &puntajeUs, numElecIA, numElecUs, &vSacar, &descarteAnterior);
                     apilar(&pilaB, &numElecIA, sizeof(int));
                     descarte = numElecIA;
+                    desapilar(&pilaA, manoIA + elec, sizeof(int));
                     printf("IA a recibido la carta: %s\n", numAfrase(*(manoIA + elec), frase));
                     system("pause");
                     system("cls");
