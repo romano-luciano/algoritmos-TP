@@ -59,7 +59,7 @@ void partida(int dific, FILE *informe,const char *codigoGrupo, const char *nombr
         desapilar(&pilaA, manoIA + i, sizeof(int));
     }
     /// RONDA
-    while (ronda)
+    while (ronda == 1)
     {
         ronda = 0;
         while (!pilaVacia(&pilaA) && puntajeUs < 12 && puntajeIA < 12)
@@ -84,7 +84,7 @@ void partida(int dific, FILE *informe,const char *codigoGrupo, const char *nombr
                         {
                             setColor(9); //azul
                             puts("Hubo repetir turno...");
-                            printf("Ultima carta descartada del oponete: %s\n", numAfrase(descarteAnterior, frase));
+                            if(descarteAnterior) printf("Ultima carta descartada del oponente: %s\n", numAfrase(descarteAnterior, frase));
                             putchar('\n');
                         }
                         else if(descarte >= 0 && descarte <= 5)
@@ -126,6 +126,13 @@ void partida(int dific, FILE *informe,const char *codigoGrupo, const char *nombr
                     printf("//////////////////////////////\n");
                     printf("PUNTAJES. USUARIO: %d  IA: %d\n", puntajeUs, puntajeIA);
                     putchar('\n');
+                    if (descarte == REPETIR_TURNO) // si descarte es repetir turno debe avisar que se repitio el turno e imprimir la ultima carte jugada del oponente
+                    {
+                        setColor(9); //azul
+                        puts("Hubo repetir turno...");
+                        if(descarteAnterior) printf("Ultima carta descartada del oponente: %s\n", numAfrase(descarteAnterior, frase));
+                        putchar('\n');
+                    }
                     if (descarte >= 0 && descarte <= 5)
                     {
                         setColor(9);
@@ -172,6 +179,7 @@ void partida(int dific, FILE *informe,const char *codigoGrupo, const char *nombr
             /// se junta toda la pila B, manda al vector se mezcla y se manda a la pila A
             setColor(3);
             printf("Nadie ha ganado. Se juntara todo el descarte y se mezclara para una nueva ronda. \n");
+            system("pause");
             setColor(15);
             system("cls");
             for (int i = 0; i < MAZO - 6; i++)
