@@ -38,6 +38,9 @@
 		<Unit filename="dificultades.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="funcionesAPI.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="jugada.c">
 			<Option compilerVar="CC" />
 		</Unit>
